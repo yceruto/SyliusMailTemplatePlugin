@@ -35,6 +35,10 @@ final class RequestDtoArgumentValueResolver implements ValueResolverInterface
 
     public function resolve(Request $request, ArgumentMetadata $argument): \Generator
     {
+        if (!$this->supports($request, $argument)) {
+            return [];
+        }
+        
         /** @var RequestDtoInterface|mixed $class */
         $class = $argument->getType();
 
