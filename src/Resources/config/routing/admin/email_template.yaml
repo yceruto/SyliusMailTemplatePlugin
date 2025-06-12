@@ -3,7 +3,7 @@ bitbag_sylius_mail_template_plugin_admin_email_template:
         alias: bitbag_sylius_mail_template_plugin.email_template
         section: admin
         path: /mail-template
-        templates: "@SyliusAdmin\\Crud"
+        templates: "@SyliusAdmin\\shared\\crud"
         redirect: update
         permission: true
         grid: bitbag_sylius_mail_template_plugin_email_template
